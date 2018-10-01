@@ -1,0 +1,34 @@
+//
+// Do any local configuration here
+//
+
+// Consider adding the 1918 zones here, if they are not used in your
+// organization
+//include "/etc/bind/zones.rfc1918";
+view "inner" {
+	match-clients { inner_acl; };
+
+	zone "cilugame.com" IN {
+	type master;
+	file "inner.zone";
+	};
+	};
+
+view "outer" {
+	match-clients { outer_acl; };
+
+	zone "cilugame.com" IN {
+	type master;
+	file "outer.zone";
+	};
+	};
+
+view "upwifi" {
+	match-clients { upwifi_acl; };
+
+	zone "cilugame.com" IN {
+	type master;
+	file "upwifi.zone";
+	};
+	};
+include "named.acl";

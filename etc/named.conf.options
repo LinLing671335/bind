@@ -1,0 +1,43 @@
+options {
+	directory "/home/nucleus-oc/bind/namedb/";
+
+	// If there is a firewall between you and nameservers you want
+	// to talk to, you may need to fix the firewall to allow multiple
+	// ports to talk.  See http://www.kb.cert.org/vuls/id/800113
+
+	// If your ISP provided one or more IP addresses for stable 
+	// nameservers, you probably want to use them as forwarders.  
+	// Uncomment the following block, and insert the addresses replacing 
+	// the all-0's placeholder.
+
+         allow-query  { any; };
+	 forwarders {
+	 210.21.4.130;
+	 221.5.88.88;
+	 };
+
+        //cnc
+        //nameserver
+        //210.21.4.130
+        //221.5.88.88 
+        //cmcc
+        //nameserver 211.136.192.6
+
+        //tel
+        //nameserver 202.96.128.86
+        //nameserver 61.144.56.100
+
+        //common
+        //nameserver 223.5.5.5
+        //nameserver 8.8.8.8
+
+	//========================================================================
+	// If BIND logs error messages about the root key being expired,
+	// you will need to update your keys.  See https://www.isc.org/bind-keys
+	//========================================================================
+	dnssec-validation auto;
+
+	auth-nxdomain no;    # conform to RFC1035
+	listen-on-v6 { any; };
+};
+

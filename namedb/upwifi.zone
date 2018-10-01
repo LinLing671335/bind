@@ -1,0 +1,49 @@
+$TTL 1D
+@	IN SOA	ns.cilugame.com. oc.cilugame.com. (
+					20180730	; serial
+					28800	; refresh
+					7200	; retry
+					1209600	; expire
+					86400 )	; minimum
+	NS	ns.cilugame.com.
+ns		A  192.168.3.252
+svn  		A  192.168.3.239
+nocdn.dev.h3  	CNAME  svn
+localdev95.h3  	CNAME  svn
+glocaldev95.h3  CNAME  svn
+nocdndevh3  	CNAME  svn
+clientftp  	CNAME  svn
+devh5  		CNAME  svn
+nocdndevh5  	CNAME  svn
+devd1  		CNAME  svn
+nocdndevd1  	CNAME  svn
+nocdn.dev.d1 	CNAME  svn
+devh9  		CNAME  svn
+nocdndevh9  	CNAME  svn
+devh11  	CNAME  svn
+nocdndevh11  	CNAME  svn
+devgp3  	CNAME  svn
+nocdndevgp3  	CNAME  svn
+devh1  		CNAME  svn
+nocdndevh1  	CNAME  svn
+localdev84.h1  	CNAME  svn
+glocaldev84.h1  CNAME  svn
+t2  		CNAME  svn
+devdocker.h1  	CNAME  svn
+devh1d  	CNAME  svn
+nocdndevh1d  	CNAME  svn
+devf1  		CNAME  svn
+nocdndevf1  	CNAME  svn
+devh1f  	CNAME  svn
+nocdndevh1f  	CNAME  svn
+dev-www  	A  192.168.1.163
+phpmyadmin.xlwz CNAME  dev-www
+dev-bbs  	CNAME  dev-www
+dev-mxxy  	CNAME  dev-www
+client-test  	CNAME  dev-www
+dev-xlwz  	CNAME  dev-www
+devh1b  	CNAME  svn
+nocdndevh1b  	CNAME  svn
+emuh1b  	CNAME  svn
+devapiad  	CNAME  svn
+devpagead  	CNAME  svn
